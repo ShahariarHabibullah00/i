@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>৬৩ তম প্রতিষ্ঠা বার্ষিকী ও পুরস্কার প্রদান অনুষ্ঠান</title>
+
+<style>  
+  /* 3-dot button */
+#menuBtn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  font-size:22px;
+  cursor:pointer;
+  z-index:1001;
+}
+
+/* Sidebar */
+#sidebar{
+  position:fixed;
+  top:0;
+  left:-260px;
+  width:260px;
+  height:100%;
+  background:var(--card);
+  box-shadow:var(--shadow);
+  padding:20px;
+  transition:0.3s ease;
+  z-index:1000;
+  overflow-y:auto;
+}
+
+/* Active */
+#sidebar.active{
+  left:0;
+}
+
+/* Links */
+#sidebar a{
+  display:block;
+  padding:8px 0;
+  text-decoration:none;
+  color:var(--text);
+}
+
+/* Group */
+.group span{
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Sub menu */
+.sub{
+  margin-left:10px;
+  display:none;
+  
+}
+
+.group.active .sub{
+  display:block;
+  color:blue;
+}
+
+/* Desktop auto show */
+@media(min-width:768px){
+  #sidebar{
+    left:0;
+  }
+  #menuBtn{
+    display:none;
+  }
+}
+:root{
+  --bg:#f5f7fb;
+  --text:#1a1a1a;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --muted:#6b7280;
+  --shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+body.dark{
+  --bg:#0f172a;
+  --text:#e5e7eb;
+  --card:#111827;
+  --accent:#3b82f6;
+  --muted:#9ca3af;
+  --shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s ease;
+}
+
+header{
+  padding:20px;
+  text-align:center;
+  font-size:clamp(18px,2.5vw,26px);
+  font-weight:600;  
+}
+
+.controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  padding:10px;
+}
+
+input,button{
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;
+  font-size:14px;
+}
+
+input{
+  background:var(--card);
+  color:var(--text);
+  box-shadow:var(--shadow);
+}
+
+button{
+  cursor:pointer;
+  background:var(--accent);
+  color:#fff;
+  transition:0.2s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:16px;
+  overflow:hidden;
+  transform:scale(0.95);
+  opacity:0;
+  animation:fadeIn 0.5s forwards;
+  transition:0.3s;
+  box-shadow:var(--shadow);
+}
+
+.card:hover{
+  transform:scale(5);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card .info{
+  padding:12px;
+}
+
+.card b{
+  font-size:15px;
+}
+
+.actions{
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
+
+.actions button{
+  flex:1;
+  margin:0 2px;
+  font-size:13px;
+  padding:6px;
+}
+
+@keyframes fadeIn{
+  to{opacity:1; transform:scale(1);} 
+}
+
+.fullscreen{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.95);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  animation:fadeIn 0.3s;
+  z-index:999;
+}
+
+.fullscreen img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:12px;
+}
+
+.filter-btn.active{
+  background:#16a34a;
+}
+
+/* 📱 Mobile Optimization */
+@media(max-width:600px){
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .card img{
+    height:140px;
+  }
+
+  .actions button{
+    font-size:11px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  
+<div id="menuBtn" onclick="toggleMenu()">⋮</div> 
+  
+<div id="sidebar"> 
+  
+  <h3>Shahariar Habibullah</h3> 
+  
+  <a href="index.html">Home</a>  
+  
+  <div class="group">    
+    <span><h3>Friends</h3></span>  
+    <div class="sub">     
+    <a href="i5.html">friends</a>    
+      <a href="i6.html">memories</a>    
+      <a href="i7.html"><i>63 anniversary</i></a>   
+      <a href="i8.html">kisorkonto</a>  
+    </div>   
+  </div>  
+  
+  <div class="group">    
+    <span><h3>other</h3></span>     
+    <div class="sub">     
+      <a href="i3.html">yt channel</a>  
+      <a href="i2.html">fb id</a>    
+      <a href="i1.html">games</a>  
+      <a href="i.html">more</a>  
+    </div>  
+  </div> 
+  
+  <div class="group">    
+    <span><h3>links</h3></span>     
+    <div class="sub">     
+      <a href="i3.html">yt channel</a>  
+      <a href="i2.html">fb id</a>    
+      <a href="i1.html">games</a>  
+      <a href="i.html">more</a>  
+    </div>  
+  </div> 
+</div>
+  
+  
+<header>৬৩ তম প্রতিষ্ঠা বার্ষিকী ও পুরস্কার প্রদান অনুষ্ঠান</header>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Search image...">
+  <button onclick="toggleMode()">🌙 / ☀</button>
+</div>
+
+<div class="controls" id="filters"></div>
+
+<div class="gallery" id="gallery"></div>
+
+<div class="fullscreen" id="fullscreen" onclick="closeFull()">
+  <img id="fullImg">
+</div>
+  <center><i>created by shahriar habibullah</i></center>
+
+<script>
+// 🔥 Preloaded Images
+const images = [
+  // img1 - img8
+  {src:"images/img1.jpg", name:"Team Photo 1", category:"team"},
+  {src:"images/img2.jpg", name:"Sinan Ahmed", category:"general"},
+  {src:"images/img3.jpg", name:"Team Photo 2", category:"team"},
+  {src:"images/img4.jpg", name:"Tasnim Tabassum Tonni", category:"general"},
+  {src:"images/img5.jpg", name:"Nowshin Saba", category:"general"},
+  {src:"images/img6.jpg", name:"Mashrafi Bin Mortoja", category:"general"},
+  {src:"images/img7.jpg", name:"রক্তিম Irtisam Ahmed Roktim", category:"general"},
+  {src:"images/img8.jpg", name:"Ayon Kumar", category:"general"},
+
+  // img10 - img26
+  {src:"images/img10.png", name:"Shorif Sir", category:"teacher"},
+  {src:"images/img11.png", name:"Shorif Sir", category:"teacher"},
+  {src:"images/img12.png", name:"Md Sifat ", category:"talent"},
+  {src:"images/img13.png", name:"Team Photo 3", category:"team"},
+  {src:"images/img14.png", name:"group photo with teacher", category:"general"},
+  {src:"images/img15.png", name:"Shahariar Habibullah Shihab", category:"talent"},
+  {src:"images/img16.png", name:"গোপাল Sree Gopal Chandro Mondol", category:"general"},
+  {src:"images/img17.png", name:"Ali Ammar", category:"general"},
+  {src:"images/img18.png", name:"Group photo with teacher", category:"general"},
+  {src:"images/img19.png", name:"Sinan Ahmed", category:"general"},
+  {src:"images/img20.png", name:"Salman Hossain", category:"general"},
+  {src:"images/img21.png", name:"jarin tasnim Kona", category:"talent"},
+  {src:"images/img22.png", name:"shahriar habibullah", category:"talent"},
+  {src:"images/img23.png", name:"Zubayer Islam Ratul", category:"talent"},
+  {src:"images/img24.png", name:"Dj Salman Hossain", category:"general"},
+  {src:"images/img25.png", name:"Abu Raihan", category:"general"},
+  {src:"images/img26.png", name:"Sa Naeem Islam Aura", category:"general"},
+];
+
+let currentFilter="all";
+
+function render(){
+  let gallery = document.getElementById("gallery");
+  let search = document.getElementById("search").value.toLowerCase();
+  gallery.innerHTML="";
+
+  images.forEach((img,i)=>{
+    if((img.name.toLowerCase().includes(search)) && (currentFilter==="all" || img.category===currentFilter)){
+      let div = document.createElement("div");
+      div.className="card";
+      div.style.animationDelay = (i*0.05)+"s";
+
+      div.innerHTML = `
+        <img src="${img.src}">
+        <div class="info">
+          <b>${img.name}</b>
+          <div class="actions">
+            <button onclick="downloadImg('${img.src}','${img.name}')">install</button>
+            <button onclick="copyImg('${img.src}')">📋</button>
+            <button onclick="openFull('${img.src}')">⛶</button>
+          </div>
+        </div>
+      `;
+
+      gallery.appendChild(div);
+    }
+  });
+}
+
+function downloadImg(src,name){
+  let a=document.createElement("a");
+  a.href=src;
+  a.download=name;
+  a.click();
+}
+
+function copyImg(src){
+  navigator.clipboard.writeText(src);
+}
+
+function openFull(src){
+  document.getElementById("fullscreen").style.display="flex";
+  document.getElementById("fullImg").src=src;
+}
+
+function closeFull(){
+  document.getElementById("fullscreen").style.display="none";
+}
+
+function toggleMode(){
+  document.body.classList.toggle("dark");
+}
+
+// Auto dark mode (optional)
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+  document.body.classList.add('dark');
+}
+
+// Search
+document.getElementById("search").addEventListener("input",render);
+
+// Filters
+let cats=["all","talent","general","team","teacher"];
+let filterDiv=document.getElementById("filters");
+
+cats.forEach(c=>{
+  let b=document.createElement("button");
+  b.innerText=c;
+  b.onclick=()=>{
+    currentFilter=c;
+    document.querySelectorAll(".filter-btn").forEach(btn=>btn.classList.remove("active"));
+    b.classList.add("active");
+    render();
+  };
+  b.classList.add("filter-btn");
+  filterDiv.appendChild(b);
+});
+
+render();
+  
+function toggleMenu(){
+  document.getElementById("sidebar").classList.toggle("active");
+}
+
+// Submenu toggle
+document.querySelectorAll(".group span").forEach(el=>{
+  el.onclick = () => {
+    el.parentElement.classList.toggle("active");
+  }
+});
+</script>
+</body>
+</html>
